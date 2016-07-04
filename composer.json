@@ -4,6 +4,7 @@
     "require": {
         "gregwar/captcha": "^1.1"
     },
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Bolo Lai",

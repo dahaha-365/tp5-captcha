@@ -16,7 +16,7 @@ class Captcha {
                 $this->error('验证码错误');
             }
         }
-        if(\think\Config::get('captcha.zh')) {
+        if(config('captcha.zh', false)) {
             $builder = new CaptchaZh();
         } else {
             $builder = new CaptchaBuilder();
