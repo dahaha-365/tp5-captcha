@@ -7,7 +7,7 @@
 
 if(!function_exists('captcha_check')) {
     function captcha_check($phrase = null) {
-        if(config('captcha.verify_ip')) {
+        if(config('captcha.verify_ip', null, false)) {
             if(request()->ip() !== session('captcha_ip')) {
                 return false;
             }
