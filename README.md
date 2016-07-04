@@ -34,14 +34,14 @@ composer require tp5/captcha
 访问`http://yourdomain/captcha/xxxx`可以检验验证码。
 
 ##其他
-1. 支持Validation验证起验证规则
+* 支持Validation验证起验证规则
 ```
 $this->validate($data,[
     'captcha|验证码'=>'required|captcha'
 ]);
 ```
 
-2. 使用助手函数进行验证
+* 使用助手函数进行验证
 ```
 captcha_check($phrase);
 ```
