@@ -34,6 +34,8 @@ composer require tp5/captcha
 访问`http://yourdomain/captcha/xxxx`可以检验验证码。
 
 ##其他
+* 更适合API验证码开发
+* 使用文泉驿开源中文字体,没有版权问题
 * 支持[`gregwar/captcha`][2]的所有API
 * 支持Validation验证起验证规则
 ```php
