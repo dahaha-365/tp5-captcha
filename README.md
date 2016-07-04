@@ -1,7 +1,7 @@
 # tp5-captcha
-captcha package for ThinkPHP 5, base on `gregwar/captcha`
+captcha package for ThinkPHP 5, base on [`gregwar/captcha`][2]
 
-基于`gregwar/captcha`的ThinkPHP 5验证码扩展
+基于[`gregwar/captcha`][2]的ThinkPHP 5验证码扩展
 
 ******
 
@@ -29,4 +29,23 @@ composer require tp5/captcha
     "verify": "6a67810e2b84a8e139fb6efce2f5a4fe"
 }
 ```
-`image`字段为验证码图片的base64编码字符串,verify字段为验证码md5结果,在前端可以通过js-md5
+`image`字段为验证码图片的base64编码字符串,verify字段为验证码md5结果,在前端可以通过[js-md5][1]进行校验，提升用户体验。
+
+访问`http://yourdomain/captcha/xxxx`可以检验验证码。
+
+##其他
+1. 支持Validation验证起验证规则
+```
+$this->validate($data,[
+    'captcha|验证码'=>'required|captcha'
+]);
+```
+
+2. 使用助手函数进行验证
+```
+captcha_check($phrase);
+```
+
+
+  [1]: https://github.com/blueimp/JavaScript-MD5
+  [2]: https://github.com/gregwar/captcha
