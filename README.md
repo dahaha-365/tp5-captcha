@@ -29,7 +29,7 @@ composer require tp5/captcha
     "verify": "6a67810e2b84a8e139fb6efce2f5a4fe"
 }
 ```
-`image`字段为验证码图片的base64编码字符串,verify字段为验证码md5结果,在前端可以通过[js-md5][1]进行校验，提升用户体验。
+`image`字段为验证码图片的base64编码字符串,verify字段为验证码md5结果,在前端可以通过[js-md5][1]进行校验，提升用户体验,同时这种数据结构也更适合API开发。
 
 访问`http://yourdomain/captcha/xxxx`可以检验验证码。
 

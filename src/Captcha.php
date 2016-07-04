@@ -16,18 +16,7 @@ class Captcha {
                 $this->error('验证码错误');
             }
         }
-        if(config('captcha.zh', null, false)) {
-            $builder = new CaptchaZh();
-        } else {
-            $builder = new CaptchaBuilder();
-        }
-        $builder->build();
-        $timeout = config('captcha.timeout', null, 300);
-        session('captcha_phrase', $builder->getPhrase());
-        session('captcha_timeout', request()->time() + $timeout);
-        if(config('captcha.verify_ip', null, false)) {
-            session('captcha_ip', request()->ip());
-        }
+        $builder = captcha_init();
         if(request()->isAjax()) {
             $base64 = $builder->inline();
             $verify = md5($builder->getPhrase());
