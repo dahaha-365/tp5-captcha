@@ -1,6 +1,7 @@
 {
     "name": "tp5/captcha",
     "description": "captcha package for thinkphp5, base on gregwar/captcha",
+    "type": "library",
     "require": {
         "gregwar/captcha": "^1.1"
     },
