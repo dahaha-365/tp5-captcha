@@ -41,10 +41,13 @@ if(!function_exists('captcha_init')) {
      */
     function captcha_init($config = []) {
         $config = captcha_config($config);
-        if($config['zh']) {
-            $builder = new \tp5\captcha\CaptchaZh();
-        } else {
-            $builder = new \Gregwar\Captcha\CaptchaBuilder();
+        static $builder = null;
+        if(null === $builder) {
+            if($config['zh']) {
+                $builder = new \tp5\captcha\CaptchaZh();
+            } else {
+                $builder = new \Gregwar\Captcha\CaptchaBuilder();
+            }
         }
         $builder->build();
         session('captcha_phrase', md5($builder->getPhrase()));
@@ -63,11 +66,12 @@ if(!function_exists('captcha_config')) {
      * @return array
      */
     function captcha_config($config = []) {
-        $conf = config('captcha', null, [
+        $default = [
             'verify_ip' => false, // 是否验证ip匹配
             'zh' => false, // 是否使用中文验证码
             'timeout' => 300, // 验证码的过期时间,单位秒
-        ]);
-        return array_merge($conf, $config);
+        ];
+        $conf = (array)config('captcha');
+        return array_merge($default, $conf, $config);
     }
 }
