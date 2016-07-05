@@ -1,7 +1,6 @@
 <?php
 namespace tp5\captcha;
 
-use Gregwar\Captcha\CaptchaBuilder;
 load_trait('controller/Jump');
 
 class Captcha {
@@ -22,7 +21,6 @@ class Captcha {
             $verify = md5($builder->getPhrase());
             return response(['image' => $base64, 'verify' => $verify], 200, [], 'json')->cacheControl('no-store');
         } else {
-            $builder->build();
             $image = $builder->get();
             return response($image, 200)->contentType('image/jpeg')->cacheControl('no-store');
         }
