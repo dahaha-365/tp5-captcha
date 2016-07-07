@@ -3,7 +3,7 @@ captcha package for ThinkPHP 5, base on [`gregwar/captcha`][2]
 
 基于[`gregwar/captcha`][2]的ThinkPHP 5验证码扩展
 
-[![Latest Stable Version](https://poser.pugx.org/tp5/captcha/v/stable)](https://packagist.org/packages/tp5/captcha) [![Total Downloads](https://poser.pugx.org/tp5/captcha/downloads)](https://packagist.org/packages/tp5/captcha)[![Monthly Downloads](https://poser.pugx.org/tp5/captcha/d/monthly)](https://packagist.org/packages/tp5/captcha)[![Latest Unstable Version](https://poser.pugx.org/tp5/captcha/v/unstable)](https://packagist.org/packages/tp5/captcha)[![License](https://poser.pugx.org/tp5/captcha/license)](https://packagist.org/packages/tp5/captcha)
+[![Latest Stable Version](https://poser.pugx.org/tp5/captcha/v/stable)](https://packagist.org/packages/tp5/captcha) [![Latest Unstable Version](https://poser.pugx.org/tp5/captcha/v/unstable)](https://packagist.org/packages/tp5/captcha) [![Total Downloads](https://poser.pugx.org/tp5/captcha/downloads)](https://packagist.org/packages/tp5/captcha) [![Monthly Downloads](https://poser.pugx.org/tp5/captcha/d/monthly)](https://packagist.org/packages/tp5/captcha) [![License](https://poser.pugx.org/tp5/captcha/license)](https://packagist.org/packages/tp5/captcha)
 ******
 
 ##安装
