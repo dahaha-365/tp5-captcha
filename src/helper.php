@@ -83,7 +83,7 @@ if(!function_exists('captcha_img')) {
      * @return string
      */
     function captcha_img($class = '') {
-        return sprintf('<img class="%1$s" src="%2$s" onclick="this.src=\'%2$s?ver=\'+new Date().getTime()" />', $class, \think\Url::build('/captcha'));
+        return sprintf('<img class="%1$s" src="%2$s" onclick="this.src=\'%2$s?ver=\'+new Date().getTime()" title="点击刷新验证码" />', $class, \think\Url::build('/captcha'));
     }
 }
 
