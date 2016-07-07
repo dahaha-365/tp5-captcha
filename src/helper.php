@@ -76,6 +76,17 @@ if(!function_exists('captcha_init')) {
     }
 }
 
+if(!function_exists('captcha_img')) {
+    /**
+     * 输出验证码图片
+     * @param string $class 验证码的html类名
+     * @return string
+     */
+    function captcha_img($class = '') {
+        return sprintf('<img class="%1$s" src="%2$s" onclick="this.src=\'%2$s?ver=\'+new Date().getTime()" />', $class, \think\Url::build('/captcha'));
+    }
+}
+
 if(!function_exists('captcha_config')) {
     /**
      * 获取验证码配置

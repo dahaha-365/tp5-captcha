@@ -51,6 +51,16 @@ captcha_check($phrase);
 ```
 `image`字段为验证码图片的base64编码字符串,verify字段为验证码md5结果,在前端可以通过[js-md5][1]进行校验，提升用户体验,同时这种数据结构也更适合API开发。
 
+可以使用助手函数
+```php
+echo captcha_img($class = '')
+```
+或者在模板中使用
+```
+{:captcha_img('class')}
+```
+输出验证码
+
 访问`http://yourdomain/captcha/xxxx`可以检验验证码。
 
   [1]: https://github.com/blueimp/JavaScript-MD5
