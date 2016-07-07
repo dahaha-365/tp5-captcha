@@ -1,6 +1,6 @@
 {
     "name": "tp5/captcha",
-    "description": "captcha package for thinkphp5, base on gregwar/captcha",
+    "description": "ThinkPHP5验证码扩展，基于gregwar/captcha，适用于API/web开发",
     "keywords": ["thinkphp5", "tp5", "captcha"],
     "type": "library",
     "require": {
