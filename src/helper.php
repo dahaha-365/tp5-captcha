@@ -1,9 +1,13 @@
 <?php
-\think\Route::get('captcha/[:phrase]', "\\tp5\\captcha\\Captcha@index");
-\think\Validate::extend('captcha', function ($phrase) {
-    return captcha_check($phrase);
-});
-\think\Validate::setTypeMsg('captcha', '验证码错误!');
+if(class_exists('\think\Route')) {
+    \think\Route::get('captcha/[:phrase]', "\\tp5\\captcha\\Captcha@index");
+}
+if(class_exists('\think\Validate')) {
+    \think\Validate::extend('captcha', function ($phrase) {
+        return captcha_check($phrase);
+    });
+    \think\Validate::setTypeMsg('captcha', '验证码错误!');
+}
 
 if(!function_exists('captcha_check')) {
     /**
