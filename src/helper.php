@@ -39,6 +39,7 @@ if(!function_exists('captcha_check')) {
         if(md5($phrase) !== session('captcha_phrase')) {
             return false;
         } else {
+            session('captcha_phrase', null);
             return true;
         }
     }
@@ -106,6 +107,7 @@ if(!function_exists('captcha_config')) {
             'height' => 40, // 验证码图片宽度高度
             'prefix' => 'captcha', // 验证码session前缀
             'detect_case' => false, // 是否区分大小写
+            'force_refresh' => true, // 验证后是否刷新验证码
         ];
         $conf = (array)config('captcha');
         return array_merge($default, $conf, $config);

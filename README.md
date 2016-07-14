@@ -38,6 +38,7 @@ captcha_check($phrase);
         'height' => 40, // 验证码图片宽度高度
         'prefix' => 'captcha', // 验证码session前缀
         'detect_case' => false, // 是否区分大小写
+        'force_refresh' => true, // 验证后是否刷新验证码
     ]
 ]
 ```
